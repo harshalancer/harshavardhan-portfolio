@@ -1,7 +1,7 @@
 import { en } from './en';
 import { ta } from './ta';
-import { ml } from './ml';
 import { hi } from './hi';
+import { ml } from './ml';
 import { Language, LanguageMeta, Translations } from './types';
 
 export * from './types';
@@ -9,15 +9,15 @@ export * from './types';
 export const SUPPORTED_LANGUAGES: LanguageMeta[] = [
   { code: 'en', name: 'English', nativeName: 'English' },
   { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்' },
-  { code: 'ml', name: 'Malayalam', nativeName: 'മലയാളം' },
   { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
+  { code: 'ml', name: 'Malayalam', nativeName: 'മലയാളം' },
 ];
 
 export const translations: Record<Language, Translations> = {
   en,
   ta,
-  ml,
   hi,
+  ml,
 };
 
 export const DEFAULT_LANGUAGE: Language = 'en';

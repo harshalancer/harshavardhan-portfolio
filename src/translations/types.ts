@@ -1,126 +1,142 @@
-export type Language = 'en' | 'ta' | 'ml' | 'hi';
+export type Language = 'en' | 'ta' | 'hi' | 'ml';
 
 export interface LanguageMeta {
   code: Language;
   name: string;
   nativeName: string;
-  dir?: 'ltr' | 'rtl';
 }
 
-export interface ServiceItem {
+export interface ServiceDetailTranslation {
   id: string;
   title: string;
-  description: string;
-  tag?: string;
-  highlight?: boolean;
+  tag: string;
+  summary: string;
+  deliverables: string[];
 }
 
-export interface WhyPoint {
+export interface ProjectDetailTranslation {
+  id: string;
   title: string;
+  category: string;
   description: string;
+  highlights: string[];
 }
 
 export interface Translations {
-  meta: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
   nav: {
     home: string;
     services: string;
     work: string;
     contact: string;
-    ctaButton: string;
+    discussProject: string;
     selectLanguage: string;
-    menuOpen: string;
-    menuClose: string;
+    openMenu: string;
+    closeMenu: string;
+    softwareAndAi: string;
   };
-  hero: {
-    name: string;
-    title: string;
+  home: {
     availability: string;
-    headline: string;
-    supporting: string;
-    description: string;
-    summaryPill: string;
-    primaryCta: string;
-    secondaryCta: string;
-    visualCodeTitle: string;
+    title: string;
+    intro: string;
+    exploreWork: string;
+    getInTouch: string;
+    coreFocus: string;
+    pillarsBadge: string;
+    pillarsHeading: string;
+    viewDetailedServices: string;
+    pillar1Title: string;
+    pillar1Desc: string;
+    pillar2Title: string;
+    pillar2Desc: string;
+    pillar3Title: string;
+    pillar3Desc: string;
+    featuredBadge: string;
+    featuredHeading: string;
+    exploreAllProjects: string;
+    inspectDetails: string;
+    collabBadge: string;
+    collabTitle: string;
+    collabDesc: string;
+    startConversation: string;
   };
   services: {
+    badge: string;
     heading: string;
     subheading: string;
-    disclaimer: string;
-    customQuoteCta: string;
-    items: ServiceItem[];
+    keyDeliverables: string;
+    discussScope: string;
+    scopingBadge: string;
+    scopingText: string;
+    requestQuote: string;
+    items: ServiceDetailTranslation[];
   };
-  work: {
+  projects: {
+    badge: string;
     heading: string;
     subheading: string;
-    emptyTitle: string;
-    emptyDescription: string;
-    emptyCta: string;
-  };
-  technologies: {
-    heading: string;
-    subheading: string;
-    categories: {
-      frontend: string;
-      backend: string;
-      cloudDb: string;
-      aiAutomation: string;
-      tools: string;
-    };
-  };
-  why: {
-    heading: string;
-    subheading: string;
-    highlight: string;
-    points: WhyPoint[];
+    architecturalHighlights: string;
+    sourceCode: string;
+    livePreview: string;
+    verifiedWork: string;
+    collabHeading: string;
+    collabText: string;
+    startDiscussion: string;
+    items: ProjectDetailTranslation[];
   };
   contact: {
+    badge: string;
     heading: string;
     subheading: string;
-    directTitle: string;
+    channelsTitle: string;
     whatsappLabel: string;
-    phoneLabel: string;
+    whatsappSub: string;
     emailLabel: string;
+    emailSub: string;
+    phoneLabel: string;
+    phoneSub: string;
+    githubLabel: string;
+    githubSub: string;
+    privacyNote: string;
+    formTitle: string;
+    formSub: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    contactLabel: string;
+    contactPlaceholder: string;
+    serviceLabel: string;
+    servicePlaceholder: string;
+    descLabel: string;
+    descPlaceholder: string;
+    submitButton: string;
+    directPrivacyNote: string;
+    errors: {
+      nameRequired: string;
+      contactRequired: string;
+      serviceRequired: string;
+      descRequired: string;
+    };
+    successHeading: string;
+    successMessage: string;
+    sendViaWhatsapp: string;
+    sendViaEmail: string;
+    editDetails: string;
     whatsappPrefill: string;
-    chatOnWhatsapp: string;
-    form: {
-      title: string;
-      nameLabel: string;
-      namePlaceholder: string;
-      contactLabel: string;
-      contactPlaceholder: string;
-      serviceLabel: string;
-      servicePlaceholder: string;
-      descLabel: string;
-      descPlaceholder: string;
-      submitButton: string;
-      submitWhatsapp: string;
-      submitEmail: string;
-      privacyNote: string;
-      errors: {
-        nameRequired: string;
-        contactRequired: string;
-        serviceRequired: string;
-        descRequired: string;
-      };
-      successHeading: string;
-      successMessage: string;
-      sendViaWhatsapp: string;
-      sendViaEmail: string;
-      reset: string;
+    serviceOptions: {
+      fullstack: string;
+      frontend: string;
+      uiux: string;
+      ai: string;
+      redesign: string;
+      robotics: string;
+      other: string;
     };
   };
   footer: {
-    name: string;
     title: string;
     tagline: string;
-    quickLinks: string;
-    contactInfo: string;
+    availableBadge: string;
+    navigationHeader: string;
+    directReachHeader: string;
     rights: string;
     backToTop: string;
   };

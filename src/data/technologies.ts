@@ -1,47 +1,47 @@
 export interface TechnologyGroup {
-  categoryKey: 'frontend' | 'backend' | 'cloudDb' | 'aiAutomation' | 'tools';
+  category: string;
   items: {
     name: string;
-    description?: string;
+    description: string;
+    highlight?: boolean;
   }[];
 }
 
 export const technologyStack: TechnologyGroup[] = [
   {
-    categoryKey: 'frontend',
+    category: 'Core Languages & Engineering',
     items: [
-      { name: 'HTML & CSS', description: 'Semantic structure, accessible layout & responsive design' },
-      { name: 'JavaScript', description: 'Modern ES6+, interactive web features & DOM manipulation' },
-      { name: 'React', description: 'Component-driven UI, state management & reactive apps' },
-      { name: 'Next.js', description: 'Server rendering, static export & performant web applications' },
+      { name: 'TypeScript', description: 'Type-safe architecture & strict client/server codebases' },
+      { name: 'Python', description: 'AI pipelines, computer vision, data logic & backend systems' },
+      { name: 'JavaScript (ES6+)', description: 'Modern asynchronous runtime, APIs & reactive UI' },
+      { name: 'HTML5 & Modern CSS', description: 'Semantic structure, accessible layout & 3D styling' },
     ],
   },
   {
-    categoryKey: 'backend',
+    category: 'Web Frameworks & Architecture',
     items: [
-      { name: 'Python', description: 'Scripting, backend services, data logic & AI integrations' },
-      { name: 'Node.js / Express', description: 'Lightweight REST APIs, microservices & backend servers' },
-      { name: 'Flask / Django', description: 'Python web frameworks for robust APIs & web applications' },
+      { name: 'Next.js (App Router)', description: 'Server Components, hybrid rendering & edge optimization', highlight: true },
+      { name: 'React', description: 'Component-driven UI, state hooks & micro-interactions' },
+      { name: 'Tailwind CSS', description: 'Design tokens, dark obsidian theme & responsive layouts' },
+      { name: 'Node.js / Express', description: 'High-throughput RESTful services & backend integration' },
     ],
   },
   {
-    categoryKey: 'cloudDb',
+    category: 'AI, Automation & Robotics',
     items: [
-      { name: 'SQL / Databases', description: 'Relational data modeling, queries & database management' },
-      { name: 'Firebase / Supabase', description: 'Real-time database, cloud functions & scalable storage' },
+      { name: 'Gemini & OpenAI APIs', description: 'LLM agents, multi-turn reasoning & structured output', highlight: true },
+      { name: 'OpenCV / Computer Vision', description: 'Image processing, feature extraction & defect analysis' },
+      { name: 'n8n / Make / Zapier', description: 'Event-driven workflow orchestration across cloud tools' },
+      { name: 'Sensor & IoT Interfacing', description: 'Serial communication, telemetry data logging & hardware control' },
     ],
   },
   {
-    categoryKey: 'aiAutomation',
+    category: 'Databases & Infrastructure',
     items: [
-      { name: 'AI APIs (OpenAI & Gemini)', description: 'LLM integration, smart chatbots, structured output & text analysis' },
-      { name: 'n8n / Make / Zapier', description: 'No-code and low-code workflow automation across business tools' },
-    ],
-  },
-  {
-    categoryKey: 'tools',
-    items: [
-      { name: 'Git / GitHub', description: 'Source control, code review, deployment workflows & collaboration' },
+      { name: 'PostgreSQL / SQL', description: 'Relational data modeling, indexing & performant queries' },
+      { name: 'Firebase / Supabase', description: 'Real-time database, auth rules & serverless functions' },
+      { name: 'Git & GitHub', description: 'Version control, automated CI/CD & code collaboration' },
+      { name: 'Vercel & Edge CDN', description: 'Zero-config continuous deployment, global caching & SSL' },
     ],
   },
 ];
