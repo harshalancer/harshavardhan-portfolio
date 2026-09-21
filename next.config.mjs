@@ -1,9 +1,12 @@
-
 /** @type {import('next').NextConfig} */
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+
 const nextConfig = {
-  output: "export",
-  basePath: "/harshavardhan-portfolio",
-  assetPrefix: "/harshavardhan-portfolio/",
+  ...(isGithubActions && {
+    output: 'export',
+    basePath: '/harshavardhan-portfolio',
+    assetPrefix: '/harshavardhan-portfolio/',
+  }),
   images: {
     unoptimized: true,
   },
